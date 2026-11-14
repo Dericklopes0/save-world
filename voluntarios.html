@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ser voluntário - Save World</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <h1>Save World</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="tutorial.html">Como usar</a>
+      <a href="campanhas.html" aria-current="page">Campanhas</a>
+      <a href="materiais.html">Materiais necessários</a>
+      <a href="ajuda.html">Ajuda</a>
+    </nav>
+  </header>
+
+  <main>
+    <form class="caixa estreita" action="campanhas.html" method="get">
+      <h2>Quero ser voluntário</h2>
+      <label for="v-nome">Nome</label>
+      <input type="text" id="v-nome" name="nome" minlength="3" required>
+      <label for="v-contato">Telefone ou e-mail</label>
+      <input type="text" id="v-contato" name="contato" required>
+      <label for="v-area">Em que posso ajudar?</label>
+      <select id="v-area" name="area">
+        <option>Triagem de doações</option>
+        <option>Transporte</option>
+        <option>Divulgação</option>
+        <option>Atendimento</option>
+      </select>
+      <label for="v-disp">Disponibilidade</label>
+      <input type="text" id="v-disp" name="disponibilidade" placeholder="Ex: sábados de manhã">
+      <p><button type="submit" class="botao">Enviar inscrição</button></p>
+    </form>
+  </main>
+
+  <footer>
+    <p>Save World</p>
+  </footer>
+
+</body>
+</html>

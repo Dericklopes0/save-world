@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início - Save World</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <h1>Save World</h1>
+    <nav>
+      <a href="index.html" aria-current="page">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="tutorial.html">Como usar</a>
+      <a href="campanhas.html">Campanhas</a>
+      <a href="materiais.html">Materiais necessários</a>
+      <a href="ajuda.html">Ajuda</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Juntos, podemos salvar o mundo, uma campanha por vez</h2>
+      <p>O Save World reúne em um só lugar campanhas de doação de dinheiro, alimentos e roupas, mostrando com transparência quanto já foi arrecadado e o que ainda falta.</p>
+    </section>
+
+    <section class="formularios">
+      <form class="caixa" action="campanhas.html" method="get">
+        <h2>Entrar como doador</h2>
+        <label for="e-email">E-mail</label>
+        <input type="email" id="e-email" name="email" required placeholder="seuemail@exemplo.com">
+        <label for="e-senha">Senha</label>
+        <input type="password" id="e-senha" minlength="6" required>
+        <p><button type="submit" class="botao">Entrar</button></p>
+      </form>
+      <form class="caixa" action="campanhas.html" method="get">
+        <h2>Criar conta de doador</h2>
+        <label for="c-nome">Nome</label>
+        <input type="text" id="c-nome" name="nome" minlength="3" required>
+        <label for="c-email">E-mail</label>
+        <input type="email" id="c-email" name="email" required>
+        <label for="c-senha">Senha</label>
+        <input type="password" id="c-senha" minlength="6" required>
+        <p><button type="submit" class="botao">Criar conta</button></p>
+      </form>
+    </section>
+    <p>É uma organização beneficente? <a href="ajuda.html#contato">Entre em contato</a> para cadastrarmos a sua campanha.</p>
+
+    <section class="resumo">
+      <div class="indicador"><span class="numero">2</span><span>campanhas ativas</span></div>
+      <div class="indicador"><span class="numero">11</span><span>doações registradas</span></div>
+      <div class="indicador"><span class="numero">R$ 3.000,00</span><span>arrecadado em dinheiro</span></div>
+      <div class="indicador"><span class="numero">20/11/2026</span><span>prazo mais próximo</span></div>
+    </section>
+
+    <section>
+      <h2>Campanhas em destaque</h2>
+    <article class="card ativa">
+    <h3><a href="campanha-cestas.html">Cestas básicas de Natal</a> <span class="etiqueta">ativa</span></h3>
+    <p>27 cestas de 40 cestas (68%) | Prazo: 20/12/2026</p>
+    <div class="trilha" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
+      <div class="barra" style="width: 68%">68%</div>
+    </div>
+  </article>
+  <article class="card urgente">
+    <h3><a href="campanha-abrigo.html">Reforma do abrigo</a> <span class="etiqueta">prazo próximo</span></h3>
+    <p>R$ 3.000,00 de R$ 5.000,00 (60%) | Prazo: 20/11/2026</p>
+    <div class="trilha" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+      <div class="barra" style="width: 60%">60%</div>
+    </div>
+  </article>
+      <p><a class="botao-claro" href="campanhas.html">Ver todas as campanhas</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Save World</p>
+  </footer>
+
+</body>
+</html>

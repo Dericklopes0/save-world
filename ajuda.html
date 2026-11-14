@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajuda - Save World</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <h1>Save World</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="tutorial.html">Como usar</a>
+      <a href="campanhas.html">Campanhas</a>
+      <a href="materiais.html">Materiais necessários</a>
+      <a href="ajuda.html" aria-current="page">Ajuda</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Dúvidas frequentes e ajuda</h1>
+    <section class="caixa">
+      <details><summary>Preciso de conta para ver as campanhas?</summary><p>Não. Campanhas e materiais necessários podem ser vistos por qualquer pessoa. A conta de doador é criada na página Início.</p></details>
+      <details><summary>Como minha organização beneficente cadastra uma campanha?</summary><p>As campanhas são cadastradas pela nossa equipe. Entre em contato pela seção Fale conosco, nesta página, e cadastraremos a sua campanha.</p></details>
+      <details><summary>Quem pode doar?</summary><p>Qualquer pessoa com uma conta de doador.</p></details>
+      <details><summary>Posso doar itens e dinheiro?</summary><p>Sim. Cada campanha é financeira (em reais) ou de itens, como alimentos e roupas.</p></details>
+      <details><summary>O que são os materiais necessários?</summary><p>É a lista do que ainda falta em cada campanha, mostrada em uma barra de progresso, para você saber como ajudar.</p></details>
+      <details><summary>Posso usar no celular?</summary><p>Sim, o layout se adapta a telas pequenas.</p></details>
+    </section>
+    <p>Precisa de um passo a passo? Veja <a href="tutorial.html">Como usar</a>.</p>
+
+    <h2 id="contato">Fale conosco</h2>
+    <p>Representa uma organização beneficente? Entre em contato para cadastrarmos a sua campanha.</p>
+    <div class="formularios">
+      <section class="caixa">
+        <h3>Nossos contatos</h3>
+        <ul>
+          <li>E-mail: saveworld@cs.org.com</li>
+          <li>WhatsApp: (11) 99800-8000</li>
+          <li>Instagram: @saveworld</li>
+        </ul>
+  
+      </section>
+      <form class="caixa" action="mailto:saveworld@cs.org.com" method="post" enctype="text/plain">
+        <h3>Envie uma mensagem</h3>
+        <label for="org-nome">Nome da organização</label>
+        <input type="text" id="org-nome" name="organizacao" minlength="3" required>
+        <label for="org-resp">Responsável</label>
+        <input type="text" id="org-resp" name="responsavel" minlength="3" required>
+        <label for="org-email">E-mail para resposta</label>
+        <input type="email" id="org-email" name="email" required>
+        <label for="org-msg">Fale sobre a campanha</label>
+        <textarea id="org-msg" name="mensagem" rows="3" required></textarea>
+        <p><button type="submit" class="botao">Enviar mensagem</button></p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>Save World</p>
+  </footer>
+
+</body>
+</html>
