@@ -1,4 +1,5 @@
 /* Cores usadas no site inteiro */
+/* Variáveis: mudar uma cor aqui muda o site todo. Elas são usadas com var(--nome) */
 :root {
   --azul: #14323f;
   --vermelho: #c8374b;
@@ -7,6 +8,7 @@
   --borda: #d5dde2;
 }
 
+/* border-box: o padding e a borda ficam dentro da largura do elemento */
 * { box-sizing: border-box; }
 
 body {
@@ -17,6 +19,7 @@ body {
   line-height: 1.5;
 }
 
+/* Centraliza o conteúdo (margin: 0 auto) e limita a largura a 1000px */
 main { max-width: 1000px; margin: 0 auto; padding: 20px 16px; }
 footer { text-align: center; padding: 20px; color: var(--cinza); }
 
@@ -32,9 +35,11 @@ footer { text-align: center; padding: 20px; color: var(--cinza); }
 .topo nav { margin-top: 10px; }
 .topo a { color: white; text-decoration: none; padding: 4px 12px; display: inline-block; border-radius: 20px; }
 .topo a:hover { text-decoration: underline; }
+/* Seletor de atributo: destaca o link que tem aria-current, ou seja, a página atual */
 .topo a[aria-current] { background: var(--vermelho); font-weight: bold; }
 
 /* Caixas (formulários, indicadores e cards) */
+/* A vírgula aplica o mesmo estilo às três classes */
 .caixa, .indicador, .card {
   background: white;
   border: 1px solid var(--borda);
@@ -65,12 +70,15 @@ input, select, textarea {
   cursor: pointer;
 }
 .botao { background: var(--vermelho); color: white; border: none; width: 100%; font-weight: bold; }
+/* Duas classes juntas: só vale para o elemento que tem as duas (botão com largura automática) */
 .botao.auto { width: auto; }
 .botao-claro { background: white; color: #1b2b34; border: 1px solid var(--borda); }
+/* flex-wrap: wrap deixa os botões passarem para a linha de baixo quando faltar espaço */
 .linha-botoes { display: flex; flex-wrap: wrap; gap: 8px; }
 
 /* Grades */
 .resumo, .formularios { display: grid; gap: 12px; }
+/* repeat(4, 1fr) cria 4 colunas de larguras iguais */
 .resumo { grid-template-columns: repeat(4, 1fr); margin-bottom: 16px; }
 .formularios { grid-template-columns: 1fr 1fr; }
 .indicador { display: flex; flex-direction: column; margin-bottom: 0; }
@@ -82,6 +90,7 @@ input, select, textarea {
 
 /* Cards de campanha: a cor da borda mostra a situação */
 .card { border-left: 6px solid var(--verde); }
+/* Classes coladas, sem espaço: só vale para o card que também tem a classe concluida */
 .card.concluida { border-left-color: var(--azul); }
 .card.urgente { border-left-color: var(--vermelho); }
 .card h3 { margin: 0 0 6px; }
@@ -89,6 +98,7 @@ input, select, textarea {
 .etiqueta { background: #eef2f4; border-radius: 20px; padding: 2px 10px; font-size: 0.8rem; font-weight: normal; }
 
 /* Barra de progresso: a trilha cinza guarda a barra verde, que "enche" ao abrir a página */
+/* overflow: hidden corta o que passar da trilha, mantendo os cantos arredondados */
 .trilha { background: #e3e9ed; border-radius: 20px; height: 22px; overflow: hidden; margin: 8px 0; }
 .barra {
   background: var(--verde);
@@ -101,15 +111,18 @@ input, select, textarea {
   white-space: nowrap;
   animation: encher 1.5s ease-out;
 }
+/* @keyframes define a animação: a largura começa em 0 e vai até a largura do HTML (chamada em animation) */
 @keyframes encher { from { width: 0; } }
 
 /* Tabelas */
+/* overflow-x: auto cria uma barra de rolagem lateral quando a tabela não cabe na tela */
 .rolagem { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; background: white; }
 th, td { border: 1px solid var(--borda); padding: 8px; text-align: left; }
 th { background: var(--azul); color: white; }
 
 /* Vídeo e mural de fotos (página Sobre) */
+/* aspect-ratio mantém a proporção 16:9 do vídeo em qualquer tela */
 .espaco-video, .video { width: 100%; aspect-ratio: 16 / 9; }
 .espaco-video { background: #dfe6ea; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--cinza); }
 .video iframe { width: 100%; height: 100%; border: 0; }
@@ -119,6 +132,7 @@ th { background: var(--azul); color: white; }
 figcaption { font-size: 0.85rem; text-align: center; color: var(--cinza); }
 
 /* Celular */
+/* Regras que só valem em telas de até 700px de largura (celulares) */
 @media (max-width: 700px) {
   .resumo { grid-template-columns: 1fr 1fr; }
   .formularios { grid-template-columns: 1fr; }
